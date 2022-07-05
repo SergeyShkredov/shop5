@@ -1,9 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-<<<<<<< HEAD
-
-createApp(App).mount('#app')
-=======
 import router from './router/index.js'
 
 
@@ -11,4 +7,3 @@ import router from './router/index.js'
 window.axios = require('axios')
 
 createApp(App).use(router).mount('#app');
->>>>>>> 3b39046 (init)

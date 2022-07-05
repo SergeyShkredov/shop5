@@ -1,84 +1,64 @@
 <template>
-<<<<<<< HEAD
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+  <!--  <div id="app">-->
+  <!--    <nav class="navbar navbar-expand navbar-dark bg-dark">-->
+  <!--      <a href class="navbar-brand" @click.prevent>Store</a>-->
+  <!--      <div class="navbar-nav mr-auto">-->
+  <!--        <li class="nav-item">-->
+  <!--          <router-link to="/home" class="nav-link">-->
+  <!--            <font-awesome-icon icon="home" />Home-->
+  <!--          </router-link>-->
+  <!--        </li>-->
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  <!--        <li class="nav-item">-->
+  <!--          <router-link to="/products" class="nav-link">-->
+  <!--            <font-awesome-icon icon="user-plus" />Products-->
+  <!--          </router-link>-->
+  <!--        </li>-->
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-=======
+  <!--        <li class="nav-item">-->
+  <!--          <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>-->
+  <!--        </li>-->
+  <!--      </div>-->
 
-  <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href class="navbar-brand" @click.prevent>Store</a>
-      <div class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link">
-            <font-awesome-icon icon="home" />Home
-          </router-link>
-        </li>
+  <!--      <div v-if="!currentUser" class="navbar-nav ml-auto">-->
+  <!--        <li class="nav-item">-->
+  <!--          <router-link to="/register" class="nav-link">-->
+  <!--            <font-awesome-icon icon="user-plus" />Sign Up-->
+  <!--          </router-link>-->
+  <!--        </li>-->
+  <!--        <li class="nav-item">-->
+  <!--          <router-link to="/login" class="nav-link">-->
+  <!--            <font-awesome-icon icon="sign-in-alt" />Login-->
+  <!--          </router-link>-->
+  <!--        </li>-->
+  <!--      </div>-->
 
+  <!--      <div v-if="currentUser" class="navbar-nav ml-auto">-->
+  <!--        <li class="nav-item">-->
+  <!--          <router-link to="/profile" class="nav-link">-->
+  <!--            <font-awesome-icon icon="user" />-->
+  <!--            {{ currentUser.username }}-->
+  <!--          </router-link>-->
+  <!--        </li>-->
+  <!--        <li class="nav-item">-->
+  <!--          <a class="nav-link" href @click.prevent="logOut">-->
+  <!--            <font-awesome-icon icon="sign-out-alt" />LogOut-->
+  <!--          </a>-->
+  <!--        </li>-->
+  <!--      </div>-->
+  <!--    </nav>-->
 
-        <li class="nav-item">
-          <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
-        </li>
-      </div>
+  <!--    <div class="container">-->
+  <!--      <router-view />-->
+  <!--    </div>-->
+  <!--  </div>-->
 
-      <div v-if="!currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/register" class="nav-link">
-            <font-awesome-icon icon="user-plus" />Sign Up
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/login" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" />Login
-          </router-link>
-        </li>
-      </div>
-
-      <div v-if="currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/profile" class="nav-link">
-            <font-awesome-icon icon="user" />
-            {{ currentUser.username }}
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" />LogOut
-          </a>
-        </li>
-      </div>
-    </nav>
-
-    <div class="container">
-      <router-view />
-    </div>
-  </div>
-
-<!--    <Navbar-->
-<!--        :cartCount="cartCount"-->
-<!--        @resetCartCount="resetCartCount"-->
-<!--        v-if="!['Signup', 'Signin'].includes($route.name)"-->
-<!--    />-->
+  <!--  <Navbar-->
+  <!--      :cartCount="cartCount"-->
+  <!--      @resetCartCount="resetCartCount"-->
+  <!--      v-if="!['Signup', 'Signin'].includes($route.name)"-->
+  <!--  />-->
 
   <div style="min-height: 60vh">
     <div style="min-height: 60vh">
@@ -97,7 +77,7 @@ export default {
 
 <script>
 import ProductService from "@/services/productService";
-// import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export default {
   data() {
@@ -134,15 +114,14 @@ export default {
     this.getProducts()
     this.getCategories()
   },
-  // components: {
-  //   Navbar
-  // }
+  components: {
+    Navbar
+  }
 };
 </script>
 
 <style>
 html {
   overflow-y: scroll;
->>>>>>> 3b39046 (init)
 }
 </style>
