@@ -4,6 +4,6 @@ import router from './router/index.js'
 
 
 //using axios as a global object
-window.axios = require('axios')
+window.axios =  require('axios')
 
 createApp(App).use(router).mount('#app');
